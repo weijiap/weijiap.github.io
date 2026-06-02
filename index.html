@@ -1,0 +1,84 @@
+---
+layout: default
+title: Home
+---
+
+<div class="container page-home">
+
+  <div class="profile-sidebar">
+    <div class="profile-photo-wrap">
+      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Weijia Peng" class="profile-photo" onerror="this.style.display='none'">
+    </div>
+    <h1 class="profile-name">Weijia Peng</h1>
+    <p class="profile-title">Assistant Professor<br>Business Analytics &amp; Finance</p>
+    <p class="profile-institution">Jack Welch College of Business<br>Sacred Heart University</p>
+    <div class="profile-links">
+      {% if site.scholar_url and site.scholar_url != "" %}
+      <a href="{{ site.scholar_url }}" target="_blank" rel="noopener" class="btn-link">Google Scholar</a>
+      {% else %}
+      <a href="#" class="btn-link disabled" title="Add your Google Scholar URL to _config.yml">Google Scholar</a>
+      {% endif %}
+      {% if site.linkedin_url and site.linkedin_url != "" %}
+      <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener" class="btn-link">LinkedIn</a>
+      {% else %}
+      <a href="#" class="btn-link disabled" title="Add your LinkedIn URL to _config.yml">LinkedIn</a>
+      {% endif %}
+      {% if site.cv_url and site.cv_url != "" %}
+      <a href="{{ site.cv_url }}" target="_blank" rel="noopener" class="btn-link">CV</a>
+      {% else %}
+      <a href="#" class="btn-link disabled" title="Add your CV URL to _config.yml">CV</a>
+      {% endif %}
+    </div>
+    <div class="profile-email">
+      <a href="mailto:pengw@sacredheart.edu">pengw@sacredheart.edu</a>
+    </div>
+  </div>
+
+  <div class="profile-main">
+    <section class="bio-section">
+      <h2>About Me</h2>
+      <p>
+        I am an Assistant Professor of Business Analytics and Finance at the
+        <a href="https://www.sacredheart.edu/academics/jack-welch-college-of-business-and-technology/" target="_blank" rel="noopener">Jack Welch College of Business and Technology</a>,
+        Sacred Heart University.
+      </p>
+      <p>
+        I received my Ph.D. in Financial Econometrics from Rutgers University–New Brunswick in 2020.
+        Prior to that, I earned a B.A. in Economics and a B.Sc. in Mathematics from
+        Central University of Finance and Economics, China, in 2014.
+      </p>
+      <p>
+        My research interests include <strong>time series analysis and forecasting</strong>,
+        <strong>machine learning and big data in finance</strong>,
+        <strong>ESG and climate finance</strong>, and <strong>FinTech</strong>.
+      </p>
+    </section>
+
+    <section class="news-section">
+      <h2>Recent Work</h2>
+      <ul class="news-list">
+        <li>
+          <span class="news-year">2026</span>
+          "Forecasting Realized Volatility of Shanghai Oil Futures with Mix-Frequency Uncertainty Factors"
+          accepted at <em>Pacific-Basin Finance Journal</em>.
+        </li>
+        <li>
+          <span class="news-year">2025</span>
+          "Does Introducing Futures Markets Affect Currency Variance Forecasts?" published in
+          <em>Eastern Economic Journal</em>, 51, 627–654.
+        </li>
+        <li>
+          <span class="news-year">2024</span>
+          "Macroeconomic and Financial Mixed Frequency Factors in a Big Data Environment" published in
+          <em>Journal of the Royal Statistical Society, Series C</em>, 73(3), 682–714.
+        </li>
+        <li>
+          <span class="news-year">2024</span>
+          "Assessing the Volatility of Green Firms" published in
+          <em>Finance Research Letters</em>, 64, 105372.
+        </li>
+      </ul>
+    </section>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+title: Weijia Peng
+email: pengw@sacredheart.edu
+description: >-
+  Assistant Professor of Business Analytics and Finance,
+  Jack Welch College of Business, Sacred Heart University
+url: "https://weijiap.github.io"
+baseurl: ""
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Social links (fill in your actual profile URLs)
+scholar_url: ""   # e.g. https://scholar.google.com/citations?user=XXXX
+linkedin_url: ""  # e.g. https://www.linkedin.com/in/weijiapeng
+cv_url: ""        # e.g. /assets/CV_WeijiaPeng.pdf

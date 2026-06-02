@@ -178,10 +178,10 @@ a:hover { text-decoration: underline; }
 
 .news-list li {
   display: flex;
-  gap: 14px;
-  padding: 10px 0;
+  gap: 16px;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
-  font-size: .93rem;
+  align-items: flex-start;
 }
 
 .news-list li:last-child { border-bottom: none; }
@@ -190,7 +190,27 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
   font-weight: 700;
   color: var(--blue);
-  width: 36px;
+  width: 38px;
+  padding-top: 1px;
+  font-size: .9rem;
+}
+
+.news-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.news-title {
+  font-size: .93rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.news-journal {
+  font-size: .84rem;
+  color: var(--muted);
+  line-height: 1.45;
 }
 
 /* ===== INNER PAGES (Research, Teaching) ===== */

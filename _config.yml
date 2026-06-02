@@ -15,6 +15,6 @@ plugins:
   - jekyll-seo-tag
 
 # Social links (fill in your actual profile URLs)
-scholar_url: ""   # e.g. https://scholar.google.com/citations?user=XXXX
-linkedin_url: ""  # e.g. https://www.linkedin.com/in/weijiapeng
+scholar_url: "https://scholar.google.com/citations?user=siGxXQ0AAAAJ&hl=en"
+linkedin_url: "https://www.linkedin.com/in/wjpeng/"
 cv_url: ""        # e.g. /assets/CV_WeijiaPeng.pdf

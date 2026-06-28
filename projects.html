@@ -63,72 +63,7 @@ highlight: true
         <span class="stack-pill">Compustat</span>
       </div>
 
-      <!-- Code Snippet 1: NLP Pipeline -->
-      <details class="code-block">
-        <summary>&#9656; NLP pipeline — anchor-based ESG scoring</summary>
-<pre><code class="language-python"># Five ESG discourse dimensions scored per sentence via cosine similarity
-ALL_ANCHOR_GROUPS = {
-    "appearance": GREEN_APPEARANCE_ANCHORS,      # ESG rhetoric / branding
-    "commitment": GREEN_COMMITMENT_ANCHORS,      # forward-looking pledges
-    "concrete":   GREEN_CONCRETE_ACTION_ANCHORS, # verifiable actions & metrics
-    "vague":      GREEN_VAGUE_TALK_ANCHORS,      # empty / aspirational language
-    "risk":       GREEN_RISK_ANCHORS,            # climate risk exposure
-}
-
-# Encode all anchor groups once; score each sentence at inference time
-embed_model = SentenceTransformer("all-MiniLM-L6-v2")
-anchor_embeddings = {
-    name: embed_model.encode(texts, convert_to_tensor=True, normalize_embeddings=True)
-    for name, texts in ALL_ANCHOR_GROUPS.items()
-}
-
-# FinBERT financial sentiment (positive - negative tone)
-finbert_pipe = pipeline(
-    "text-classification",
-    model=AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert"),
-    tokenizer=AutoTokenizer.from_pretrained("ProsusAI/finbert"),
-    truncation=True, max_length=512,
-)
-
-# Derived signals: substance gap and hype gap
-df["green_hype_gap"]      = df["appearance_score"] - df["concrete_score"]
-df["green_substance_idx"] = df["concrete_score"]   - df["vague_score"]
-</code></pre>
-      </details>
-
-      <!-- Code Snippet 2: XGBoost + SHAP -->
-      <details class="code-block">
-        <summary>&#9656; XGBoost model — temporal split &amp; SHAP interaction</summary>
-<pre><code class="language-python"># Strict temporal split: train ≤ 2018 | val 2019–2021 | test 2022–2025
-year       = ml["year"].astype(int)
-train_mask = year <= 2018
-val_mask   = (year >= 2019) & (year <= 2021)
-test_mask  = year >= 2022
-
-X_train, y_train = X[train_mask], y[train_mask]  # 1,413 obs
-X_val,   y_val   = X[val_mask],   y[val_mask]    #   919 obs
-X_test,  y_test  = X[test_mask],  y[test_mask]   # 1,079 obs
-
-model = xgb.XGBRegressor(
-    n_estimators=1000, learning_rate=0.05, max_depth=4,
-    subsample=0.8, colsample_bytree=0.8, min_child_weight=5,
-    reg_alpha=0.1, reg_lambda=1.0,
-    enable_categorical=True, tree_method="hist",
-    early_stopping_rounds=30, eval_metric="rmse",
-)
-model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
-
-# SHAP interaction: appearance_score × log_carbon_intensity
-explainer  = shap.TreeExplainer(model)
-shap_inter = explainer.shap_interaction_values(X_test_int)
-
-i_appear = feat_idx["appearance_score"]
-i_carbon = feat_idx["log_carbon_intensity"]
-# Central finding: rhetoric loses legitimacy under high carbon intensity
-interact_strength = np.abs(shap_inter[:, i_appear, i_carbon]).mean()
-print(f"Mean |SHAP interaction| rhetoric × carbon: {interact_strength:.4f}")
-</code></pre>
-      </details>
+      <a href="/projects/esg-nlp/" class="proj-detail-link">View Full Project &rarr;</a>
     </div><!-- /project 1 -->
 
 

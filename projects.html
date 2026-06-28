@@ -2,25 +2,14 @@
 layout: default
 title: Projects
 permalink: /projects/
-highlight: true
 ---
 
 <div class="container page-content">
   <h1 class="page-heading">Projects</h1>
-  <p class="page-subheading">Data science and machine learning projects across finance, healthcare, and NLP.</p>
-
-  <!-- Filter Buttons -->
-  <div class="project-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="ml">Machine Learning</button>
-    <button class="filter-btn" data-filter="nlp">NLP</button>
-    <button class="filter-btn" data-filter="causal">Causal Inference</button>
-    <button class="filter-btn" data-filter="de">Data Engineering</button>
-  </div>
+  <p class="page-subheading">Data science and machine learning projects in finance and NLP.</p>
 
   <div class="project-list">
 
-    <!-- ── PROJECT 1: ESG NLP ── -->
     <div class="project-card" data-category="nlp ml">
       <div class="project-card-header">
         <h3 class="project-title">ESG Disclosure Analytics &amp; Rating Prediction</h3>
@@ -64,180 +53,7 @@ highlight: true
       </div>
 
       <a href="/projects/esg-nlp/" class="proj-detail-link">View Full Project &rarr;</a>
-    </div><!-- /project 1 -->
-
-
-    <!-- ── PROJECT 2: Mixed-Frequency Forecasting ── -->
-    <div class="project-card" data-category="ml">
-      <div class="project-card-header">
-        <h3 class="project-title">Mixed-Frequency Macro-Financial Forecasting</h3>
-        <div class="project-tags">
-          <span class="tag tag-ml">Machine Learning</span>
-        </div>
-      </div>
-
-      <div class="project-stats">
-        <span class="stat"><strong>5-min</strong> intraday S&amp;P 500 data</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat"><strong>30+</strong> macro variables</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat"><strong>2006–2025</strong></span>
-      </div>
-
-      <p class="project-desc">
-        Engineered a scalable forecasting system that blends high-frequency intraday price data with
-        low-frequency macroeconomic indicators to predict <strong>asset returns, realized volatility,
-        exchange rates, and credit ratings</strong>.
-        Built non-parametric intraday volatility decompositions, state-space mixed-frequency factor models,
-        and a cross-sectional market contagion measure that captures correlation spillovers across industry groups.
-        Benchmarked <strong>random forest</strong> and ensemble methods against classical econometric baselines;
-        achieved significant out-of-sample R² improvements across multiple asset classes.
-      </p>
-
-      <div class="project-stack">
-        <span class="stack-pill">Python</span>
-        <span class="stack-pill">R</span>
-        <span class="stack-pill">MIDAS</span>
-        <span class="stack-pill">State-Space Models</span>
-        <span class="stack-pill">Random Forest</span>
-        <span class="stack-pill">High-Frequency Data</span>
-      </div>
     </div>
 
-
-    <!-- ── PROJECT 3: Causal Inference ── -->
-    <div class="project-card" data-category="causal">
-      <div class="project-card-header">
-        <h3 class="project-title">Causal Inference on ESG Governance &amp; Global Investment</h3>
-        <div class="project-tags">
-          <span class="tag tag-causal">Causal Inference</span>
-        </div>
-      </div>
-
-      <div class="project-stats">
-        <span class="stat"><strong>6,700+</strong> firm-years</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat"><strong>189</strong> countries</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat">FDI &middot; ESG &middot; Biodiversity</span>
-      </div>
-
-      <p class="project-desc">
-        Applied modern causal ML to two large-scale policy questions.
-        <strong>Firm-level:</strong> used <strong>Double Machine Learning (DML)</strong> and
-        <strong>Instrumental Variables</strong> on a 6,700+ firm-year panel to isolate the causal
-        effect of ESG disclosure quality on financial outcomes, controlling for endogenous reporting incentives
-        and firm-level confounders.
-        <strong>Country-level:</strong> applied <strong>Dynamic Panel GMM</strong>, <strong>Panel VAR</strong>,
-        and <strong>Granger causality</strong> on 189-country FDI data to estimate how biodiversity
-        conservation policies affect cross-border investment flows.
-        All specifications include Hausman tests, over-identification tests, and weak-instrument diagnostics.
-      </p>
-
-      <div class="project-stack">
-        <span class="stack-pill">Python</span>
-        <span class="stack-pill">R</span>
-        <span class="stack-pill">Double ML</span>
-        <span class="stack-pill">Instrumental Variables</span>
-        <span class="stack-pill">Dynamic Panel GMM</span>
-        <span class="stack-pill">Panel VAR</span>
-        <span class="stack-pill">Granger Causality</span>
-      </div>
-    </div>
-
-
-    <!-- ── PROJECT 4: Healthcare BI ── -->
-    <div class="project-card" data-category="de">
-      <div class="project-card-header">
-        <h3 class="project-title">Healthcare Commercial Intelligence Platform</h3>
-        <div class="project-tags">
-          <span class="tag tag-de">Data Engineering</span>
-        </div>
-      </div>
-
-      <div class="project-stats">
-        <span class="stat"><strong>300M+</strong> patient lives</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat"><strong>7,500+</strong> insurance plans</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat">ParaPRO LLC</span>
-      </div>
-
-      <p class="project-desc">
-        Delivered an end-to-end business intelligence platform from raw data for a pharmaceutical client.
-        Designed a <strong>relational SQL database schema</strong> and built <strong>Python ETL pipelines</strong>
-        to ingest, clean, validate, and integrate heterogeneous healthcare claims data covering
-        300M+ patient lives and 7,500+ insurance plans.
-        Built an <strong>interactive Tableau dashboard</strong> with custom KPI reporting and self-service analytics,
-        enabling commercial teams to monitor market share, prioritize sales territories,
-        and evaluate insurance reimbursement coverage for flagship products.
-      </p>
-
-      <div class="project-stack">
-        <span class="stack-pill">Python</span>
-        <span class="stack-pill">SQL</span>
-        <span class="stack-pill">Tableau</span>
-        <span class="stack-pill">ETL</span>
-        <span class="stack-pill">Healthcare Claims</span>
-      </div>
-    </div>
-
-
-    <!-- ── PROJECT 5: Oil NLP ── -->
-    <div class="project-card" data-category="nlp ml">
-      <div class="project-card-header">
-        <h3 class="project-title">Oil Market NLP &amp; Price Forecasting</h3>
-        <div class="project-tags">
-          <span class="tag tag-nlp">NLP</span>
-          <span class="tag tag-ml">Machine Learning</span>
-        </div>
-      </div>
-
-      <div class="project-stats">
-        <span class="stat"><strong>10 years</strong> of news data</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat">Crude oil futures &middot; S&amp;P 500</span>
-        <span class="stat-sep">&middot;</span>
-        <span class="stat">Informa PLC</span>
-      </div>
-
-      <p class="project-desc">
-        Designed and deployed a full NLP-to-forecast pipeline for commodity market prediction.
-        Collected a decade of oil news from web APIs; preprocessed and tokenized the corpus;
-        engineered textual features using <strong>LDA topic modeling</strong> and <strong>sentiment analysis</strong>
-        to extract latent market narratives and tone signals.
-        Trained and benchmarked <strong>neural networks</strong> and <strong>ensemble models</strong>
-        (random forest, decision tree) on high-dimensional macro-financial feature sets
-        to forecast <strong>crude oil futures prices</strong> and <strong>S&amp;P 500 returns</strong>.
-      </p>
-
-      <div class="project-stack">
-        <span class="stack-pill">Python</span>
-        <span class="stack-pill">LDA</span>
-        <span class="stack-pill">Sentiment Analysis</span>
-        <span class="stack-pill">Neural Networks</span>
-        <span class="stack-pill">Random Forest</span>
-        <span class="stack-pill">Web APIs</span>
-      </div>
-    </div>
-
-  </div><!-- /project-list -->
+  </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script>hljs.highlightAll();</script>
-
-<script>
-  const btns  = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.project-card');
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter;
-      cards.forEach(c => {
-        c.style.display = (f === 'all' || c.dataset.category.includes(f)) ? 'block' : 'none';
-      });
-    });
-  });
-</script>

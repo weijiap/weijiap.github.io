@@ -1,0 +1,170 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<div class="container page-content">
+  <h1 class="page-heading">Projects</h1>
+  <p class="page-subheading">Industry-focused data science and machine learning projects in finance, healthcare, and NLP.</p>
+
+  <!-- Filter Buttons -->
+  <div class="project-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="ml">Machine Learning</button>
+    <button class="filter-btn" data-filter="nlp">NLP</button>
+    <button class="filter-btn" data-filter="causal">Causal Inference</button>
+    <button class="filter-btn" data-filter="de">Data Engineering</button>
+  </div>
+
+  <!-- Project Cards -->
+  <div class="project-list">
+
+    <!-- Project 1: ESG NLP -->
+    <div class="project-card" data-category="nlp ml">
+      <div class="project-card-header">
+        <h3 class="project-title">ESG Disclosure Analytics &amp; Rating Prediction</h3>
+        <div class="project-tags">
+          <span class="tag tag-nlp">NLP</span>
+          <span class="tag tag-ml">Machine Learning</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        Built an end-to-end NLP pipeline over <strong>10,000+ SEC 10-K filings</strong> from 450+ S&amp;P 500 companies (2007–2025).
+        Used <strong>FinBERT</strong> and <strong>SentenceTransformer</strong> to score each filing across five ESG discourse dimensions:
+        rhetoric appearance, concrete commitment, vague talk, climate risk exposure, and financial sentiment.
+        Engineered a novel <em>green hype gap</em> metric quantifying the mismatch between ESG rhetoric and substantive action.
+        Trained an <strong>XGBoost</strong> model (strict temporal train/val/test split) to predict MSCI ESG ratings, achieving strong out-of-sample performance.
+        Applied <strong>SHAP TreeExplainer</strong> with interaction analysis to reveal a key nonlinearity: ESG rhetoric provides legitimacy gains
+        that diminish sharply for high-carbon-intensity firms — uncovering a systemic tension in how ESG rating agencies weigh disclosure.
+      </p>
+      <div class="project-stack">
+        <strong>Stack:</strong> Python &middot; FinBERT &middot; SentenceTransformer &middot; XGBoost &middot; SHAP &middot; SEC EDGAR &middot; LSEG &middot; MSCI &middot; WRDS / Compustat
+      </div>
+      <div class="project-links">
+        <a href="https://www.dropbox.com/scl/fi/o0j2e1bdr38sxubv8otyi/HAR-JI-2.pdf?rlkey=dhfu3d5uublpcofapgmm3ozbz&st=koedic5a&dl=0" target="_blank" rel="noopener" class="proj-link">Paper (draft)</a>
+      </div>
+    </div>
+
+    <!-- Project 2: Mixed-Frequency Forecasting -->
+    <div class="project-card" data-category="ml">
+      <div class="project-card-header">
+        <h3 class="project-title">Mixed-Frequency Macro-Financial Forecasting Engine</h3>
+        <div class="project-tags">
+          <span class="tag tag-ml">Machine Learning</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        Designed a scalable forecasting system integrating heterogeneous high- and low-frequency financial and macroeconomic data
+        to predict <strong>asset returns, realized volatility, exchange rates, and credit ratings</strong>.
+        Built state-space mixed-frequency factor models alongside <strong>random forest</strong> and ensemble methods,
+        with a non-parametric intraday volatility decomposition applied to 5-minute S&amp;P 500 data (2006–2018) and 30+ macro variables.
+        Achieved significant out-of-sample R² improvements over benchmark models.
+        Implemented a cross-sectional market contagion measure that boosts sector-level return predictability by capturing
+        correlation spillovers across industry groups.
+      </p>
+      <div class="project-stack">
+        <strong>Stack:</strong> Python &middot; R &middot; MIDAS &middot; State-Space Models &middot; Random Forest &middot; High-Frequency Financial Data
+      </div>
+      <div class="project-links">
+        <a href="https://academic.oup.com/jrsssc/article/73/3/682/7604355" target="_blank" rel="noopener" class="proj-link">JRSS-C (2024)</a>
+        <a href="https://link.springer.com/article/10.1007/s00181-023-02404-y" target="_blank" rel="noopener" class="proj-link">Empirical Economics (2023)</a>
+        <a href="https://www.dropbox.com/scl/fi/67bu2de8im9r4t460qzq5/frequency-6-16-2026.pdf?rlkey=4b6bugv8plp6wahidfitp1los&st=9n9fwnbw&dl=0" target="_blank" rel="noopener" class="proj-link">Working Paper</a>
+      </div>
+    </div>
+
+    <!-- Project 3: Causal Inference -->
+    <div class="project-card" data-category="causal">
+      <div class="project-card-header">
+        <h3 class="project-title">Causal Inference on ESG Governance &amp; Global Investment</h3>
+        <div class="project-tags">
+          <span class="tag tag-causal">Causal Inference</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        Led two large-scale causal inference projects using firm-level and country-level panel data.
+        On the <strong>firm side</strong>: applied <strong>Double Machine Learning (DML)</strong> and <strong>Instrumental Variables (IV)</strong>
+        on a panel of 6,700+ firm-years to isolate the causal effect of ESG disclosure quality on financial outcomes,
+        controlling for endogenous reporting incentives.
+        On the <strong>investment side</strong>: used <strong>Dynamic Panel GMM</strong>, <strong>Panel VAR</strong>, and
+        <strong>Granger causality</strong> tests on 189-country FDI data to estimate how biodiversity conservation
+        and natural capital policies affect foreign direct investment flows.
+        All specifications include extensive robustness checks (Hausman tests, over-identification, weak-instrument diagnostics).
+      </p>
+      <div class="project-stack">
+        <strong>Stack:</strong> Python &middot; R &middot; Double ML &middot; IV &middot; Dynamic Panel GMM &middot; Panel VAR &middot; Granger Causality
+      </div>
+      <div class="project-links">
+        <a href="https://www.dropbox.com/scl/fi/xf4gt03h3a9j3aknhwul2/BiodiversityInternational-1.pdf?rlkey=fv5h5piumedtouck7nbkzs3ds&st=e0t6zr8a&dl=0" target="_blank" rel="noopener" class="proj-link">Working Paper</a>
+      </div>
+    </div>
+
+    <!-- Project 4: Healthcare BI -->
+    <div class="project-card" data-category="de">
+      <div class="project-card-header">
+        <h3 class="project-title">Healthcare Commercial Intelligence Platform</h3>
+        <div class="project-tags">
+          <span class="tag tag-de">Data Engineering</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        Built an end-to-end business intelligence platform from raw data for a pharmaceutical client (ParaPRO LLC).
+        Designed a <strong>relational SQL database</strong> and engineered <strong>Python ETL pipelines</strong>
+        to clean, validate, and integrate heterogeneous healthcare datasets spanning <strong>300M+ patient lives</strong>
+        and <strong>7,500+ insurance plans</strong>.
+        Delivered an <strong>interactive Tableau dashboard</strong> with custom reporting and self-service analytics,
+        enabling product and commercial teams to monitor key business metrics, identify market opportunities,
+        prioritize sales territories, and evaluate insurance reimbursement for flagship products.
+      </p>
+      <div class="project-stack">
+        <strong>Stack:</strong> Python &middot; SQL &middot; Tableau &middot; ETL &middot; Healthcare Claims Data
+      </div>
+    </div>
+
+    <!-- Project 5: Oil NLP -->
+    <div class="project-card" data-category="nlp ml">
+      <div class="project-card-header">
+        <h3 class="project-title">Oil Market NLP Forecasting Pipeline</h3>
+        <div class="project-tags">
+          <span class="tag tag-nlp">NLP</span>
+          <span class="tag tag-ml">Machine Learning</span>
+        </div>
+      </div>
+      <p class="project-desc">
+        Developed a full NLP-to-forecast pipeline at Informa PLC for commodity market prediction.
+        Collected and processed a <strong>10-year oil news corpus</strong> from web APIs; engineered textual features
+        using <strong>LDA topic modeling</strong> and <strong>sentiment analysis</strong> to capture latent market narratives.
+        Trained and benchmarked <strong>neural network</strong> and <strong>ensemble models</strong>
+        (random forest, decision tree) on high-dimensional financial and macroeconomic feature sets
+        to forecast <strong>crude oil futures prices</strong> and <strong>S&amp;P 500 returns</strong>.
+      </p>
+      <div class="project-stack">
+        <strong>Stack:</strong> Python &middot; LDA &middot; Sentiment Analysis &middot; Neural Networks &middot; Random Forest &middot; Web APIs
+      </div>
+      <div class="project-links">
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0927538X2600096X" target="_blank" rel="noopener" class="proj-link">Related Paper</a>
+      </div>
+    </div>
+
+  </div><!-- end project-list -->
+</div>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.category.includes(filter)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

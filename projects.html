@@ -6,7 +6,7 @@ permalink: /projects/
 
 <div class="container page-content">
   <h1 class="page-heading">Projects</h1>
-  <p class="projects-subtitle">Production-grade ML engineering — from model training to deployed APIs and end-to-end platforms.</p>
+  <p class="projects-subtitle">Selected software projects in machine learning engineering.</p>
 
   <div class="project-cards">
 
@@ -16,38 +16,37 @@ permalink: /projects/
         <div class="project-card-meta">
           <span class="project-type-badge">End-to-End Platform</span>
           <h2 class="project-name">AutoForecast Lab</h2>
-          <p class="project-tagline">Machine learning forecasting platform &mdash; from raw CSV to validated predictions, REST API, and interactive dashboard</p>
+          <p class="project-tagline">Time-series forecasting platform with REST API and interactive dashboard</p>
         </div>
         <a href="https://github.com/weijiap/forecasting-platform" target="_blank" rel="noopener" class="project-github-btn">View on GitHub &rarr;</a>
       </div>
 
       <p class="project-description">
-        An end-to-end time-series forecasting system that ingests raw data, engineers features automatically,
-        trains and evaluates a machine learning model using walk-forward validation to prevent data leakage,
-        and exposes results through both a FastAPI REST service and an interactive Streamlit dashboard &mdash;
-        all containerized and covered by CI.
+        An end-to-end forecasting system built on a modular pipeline: data ingestion and validation,
+        feature engineering, model training with walk-forward evaluation, and forecast export &mdash;
+        accessible through a FastAPI service and a Streamlit dashboard, containerized with Docker.
       </p>
 
       <div class="project-highlights">
         <div class="highlight-item">
           <div class="highlight-icon">⚙️</div>
           <div class="highlight-body">
-            <strong>ML Pipeline</strong>
-            <span>Automated lag, rolling, and calendar feature engineering. Chronological train/test splits with expanding-window walk-forward validation to eliminate look-ahead bias.</span>
+            <strong>Data &amp; Features</strong>
+            <span>Lag, rolling, and calendar features. Automatic frequency detection. Chronological train/test splits with expanding-window validation.</span>
           </div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon">🖥️</div>
           <div class="highlight-body">
-            <strong>Full-Stack System</strong>
-            <span>FastAPI REST service for programmatic access and a Streamlit dashboard for interactive exploration, CSV upload, and downloadable forecast results.</span>
+            <strong>API &amp; Dashboard</strong>
+            <span>FastAPI service for programmatic access. Streamlit dashboard for CSV upload, interactive visualization, and downloadable results.</span>
           </div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon">🔁</div>
           <div class="highlight-body">
-            <strong>Production Engineering</strong>
-            <span>Docker containerization, GitHub Actions CI, Ruff linting, mypy static type checking, and pytest for reproducible and regression-safe builds.</span>
+            <strong>Tooling</strong>
+            <span>Docker, GitHub Actions CI, Ruff, mypy, pytest.</span>
           </div>
         </div>
       </div>
@@ -72,38 +71,37 @@ permalink: /projects/
         <div class="project-card-meta">
           <span class="project-type-badge">Production Deployment</span>
           <h2 class="project-name">ML Production API</h2>
-          <p class="project-tagline">Containerized REST inference service &mdash; bridging the gap between a trained model and a deployable, monitored API</p>
+          <p class="project-tagline">Containerized REST inference service for a trained scikit-learn model</p>
         </div>
         <a href="https://github.com/weijiap/ml-production-api" target="_blank" rel="noopener" class="project-github-btn">View on GitHub &rarr;</a>
       </div>
 
       <p class="project-description">
-        A production-ready template for serving trained machine learning models as a REST API.
-        The project focuses on the engineering gap between a working notebook and a deployable service &mdash;
-        covering model lifecycle management, typed request contracts, structured logging, environment-based configuration,
-        and automated quality gates on every commit.
+        A FastAPI service for serving a trained Random Forest model, with request validation,
+        structured logging, environment-based configuration, and an OpenAPI documentation endpoint.
+        Packaged as a Docker image with automated CI checks on every push.
       </p>
 
       <div class="project-highlights">
         <div class="highlight-item">
           <div class="highlight-icon">🚀</div>
           <div class="highlight-body">
-            <strong>Inference Layer</strong>
-            <span>Model loaded once at startup via FastAPI lifespan to minimize per-request latency. Dedicated inference module keeps prediction logic decoupled from API routing.</span>
+            <strong>Inference</strong>
+            <span>Model loaded once at startup via FastAPI lifespan. Prediction logic isolated in a dedicated inference module, separate from routing and schemas.</span>
           </div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon">🛡️</div>
           <div class="highlight-body">
-            <strong>Typed Contracts</strong>
-            <span>Pydantic schemas validate every incoming request and enforce a consistent response structure. Environment variables drive config with no hard-coded deployment values.</span>
+            <strong>Contracts &amp; Config</strong>
+            <span>Pydantic schemas for request and response validation. Application settings managed through environment variables.</span>
           </div>
         </div>
         <div class="highlight-item">
           <div class="highlight-icon">✅</div>
           <div class="highlight-body">
-            <strong>Quality Gates</strong>
-            <span>Ruff linting, mypy type checking, and pytest run automatically on every push via GitHub Actions CI, preventing formatting, typing, and functional regressions before merge.</span>
+            <strong>Tooling</strong>
+            <span>Ruff, mypy, and pytest run on every push via GitHub Actions CI.</span>
           </div>
         </div>
       </div>

@@ -6,31 +6,121 @@ permalink: /projects/
 
 <div class="container page-content">
   <h1 class="page-heading">Projects</h1>
+  <p class="projects-subtitle">Production-grade ML engineering — from model training to deployed APIs and end-to-end platforms.</p>
 
-  <section class="research-section">
-    <ul class="paper-list" style="list-style: none; padding: 0;">
+  <div class="project-cards">
 
-      <li class="paper-item">
-        <p class="paper-title">
-          <a href="https://github.com/weijiap/ml-production-api" target="_blank" rel="noopener">
-            ML Production API
-          </a>
-        </p>
-        <p class="paper-meta">
-          A production-ready machine learning inference service built with FastAPI, scikit-learn, Docker, and GitHub Actions CI.
-          The project demonstrates how to move a trained model from a notebook to a tested, containerized REST API with structured logging,
-          Pydantic request validation, environment-based configuration, and automated quality checks (Ruff, mypy, pytest).
-        </p>
-        <p class="paper-meta" style="margin-top: 6px;">
-          <span class="paper-badge" style="background:#e8f0fb; color:#2b5ea7; border:1px solid #c4d4f0;">Python</span>
-          <span class="paper-badge" style="background:#e8f0fb; color:#2b5ea7; border:1px solid #c4d4f0;">FastAPI</span>
-          <span class="paper-badge" style="background:#e8f0fb; color:#2b5ea7; border:1px solid #c4d4f0;">scikit-learn</span>
-          <span class="paper-badge" style="background:#e8f0fb; color:#2b5ea7; border:1px solid #c4d4f0;">Docker</span>
-          <span class="paper-badge" style="background:#e8f0fb; color:#2b5ea7; border:1px solid #c4d4f0;">GitHub Actions</span>
-        </p>
-      </li>
+    <!-- AutoForecast Lab -->
+    <div class="project-card">
+      <div class="project-card-top">
+        <div class="project-card-meta">
+          <span class="project-type-badge">End-to-End Platform</span>
+          <h2 class="project-name">AutoForecast Lab</h2>
+          <p class="project-tagline">Machine learning forecasting platform &mdash; from raw CSV to validated predictions, REST API, and interactive dashboard</p>
+        </div>
+        <a href="https://github.com/weijiap/forecasting-platform" target="_blank" rel="noopener" class="project-github-btn">View on GitHub &rarr;</a>
+      </div>
 
-    </ul>
-  </section>
+      <p class="project-description">
+        An end-to-end time-series forecasting system that ingests raw data, engineers features automatically,
+        trains and evaluates a machine learning model using walk-forward validation to prevent data leakage,
+        and exposes results through both a FastAPI REST service and an interactive Streamlit dashboard &mdash;
+        all containerized and covered by CI.
+      </p>
 
+      <div class="project-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">⚙️</div>
+          <div class="highlight-body">
+            <strong>ML Pipeline</strong>
+            <span>Automated lag, rolling, and calendar feature engineering. Chronological train/test splits with expanding-window walk-forward validation to eliminate look-ahead bias.</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🖥️</div>
+          <div class="highlight-body">
+            <strong>Full-Stack System</strong>
+            <span>FastAPI REST service for programmatic access and a Streamlit dashboard for interactive exploration, CSV upload, and downloadable forecast results.</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🔁</div>
+          <div class="highlight-body">
+            <strong>Production Engineering</strong>
+            <span>Docker containerization, GitHub Actions CI, Ruff linting, mypy static type checking, and pytest for reproducible and regression-safe builds.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">Streamlit</span>
+        <span class="stack-tag">scikit-learn</span>
+        <span class="stack-tag">pandas</span>
+        <span class="stack-tag">Docker</span>
+        <span class="stack-tag">GitHub Actions</span>
+        <span class="stack-tag">pytest</span>
+        <span class="stack-tag">mypy</span>
+        <span class="stack-tag">Ruff</span>
+      </div>
+    </div>
+
+    <!-- ML Production API -->
+    <div class="project-card">
+      <div class="project-card-top">
+        <div class="project-card-meta">
+          <span class="project-type-badge">Production Deployment</span>
+          <h2 class="project-name">ML Production API</h2>
+          <p class="project-tagline">Containerized REST inference service &mdash; bridging the gap between a trained model and a deployable, monitored API</p>
+        </div>
+        <a href="https://github.com/weijiap/ml-production-api" target="_blank" rel="noopener" class="project-github-btn">View on GitHub &rarr;</a>
+      </div>
+
+      <p class="project-description">
+        A production-ready template for serving trained machine learning models as a REST API.
+        The project focuses on the engineering gap between a working notebook and a deployable service &mdash;
+        covering model lifecycle management, typed request contracts, structured logging, environment-based configuration,
+        and automated quality gates on every commit.
+      </p>
+
+      <div class="project-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">🚀</div>
+          <div class="highlight-body">
+            <strong>Inference Layer</strong>
+            <span>Model loaded once at startup via FastAPI lifespan to minimize per-request latency. Dedicated inference module keeps prediction logic decoupled from API routing.</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🛡️</div>
+          <div class="highlight-body">
+            <strong>Typed Contracts</strong>
+            <span>Pydantic schemas validate every incoming request and enforce a consistent response structure. Environment variables drive config with no hard-coded deployment values.</span>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">✅</div>
+          <div class="highlight-body">
+            <strong>Quality Gates</strong>
+            <span>Ruff linting, mypy type checking, and pytest run automatically on every push via GitHub Actions CI, preventing formatting, typing, and functional regressions before merge.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-stack">
+        <span class="stack-tag">Python</span>
+        <span class="stack-tag">FastAPI</span>
+        <span class="stack-tag">scikit-learn</span>
+        <span class="stack-tag">Pydantic</span>
+        <span class="stack-tag">joblib</span>
+        <span class="stack-tag">Docker</span>
+        <span class="stack-tag">GitHub Actions</span>
+        <span class="stack-tag">pytest</span>
+        <span class="stack-tag">mypy</span>
+        <span class="stack-tag">Ruff</span>
+      </div>
+    </div>
+
+  </div>
 </div>

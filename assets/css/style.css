@@ -150,6 +150,17 @@ a:hover { text-decoration: underline; }
 
 .bio-section p { margin-bottom: 12px; }
 
+/* Education + Interests side by side */
+.edu-interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+
+@media (max-width: 600px) {
+  .edu-interests-grid { grid-template-columns: 1fr; }
+}
+
 /* Interests */
 .interest-list {
   list-style: none;

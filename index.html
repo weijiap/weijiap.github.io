@@ -13,12 +13,18 @@ title: Home
     <div class="profile-links">
       {% if site.scholar_url and site.scholar_url != "" %}
       <a href="{{ site.scholar_url }}" target="_blank" rel="noopener" class="btn-link">Google Scholar</a>
+      {% else %}
+      <a href="#" class="btn-link disabled">Google Scholar</a>
       {% endif %}
       {% if site.linkedin_url and site.linkedin_url != "" %}
       <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener" class="btn-link">LinkedIn</a>
+      {% else %}
+      <a href="#" class="btn-link disabled">LinkedIn</a>
       {% endif %}
       {% if site.cv_url and site.cv_url != "" %}
       <a href="{{ site.cv_url }}" target="_blank" rel="noopener" class="btn-link">CV</a>
+      {% else %}
+      <a href="#" class="btn-link disabled">CV</a>
       {% endif %}
     </div>
     <div class="profile-email">
@@ -28,17 +34,14 @@ title: Home
 
   <div class="profile-main">
 
-    <section class="home-section">
-      <h2 class="home-section-title">About</h2>
-      <p class="bio-text">
+    <section class="bio-section">
+      <h2>About Me</h2>
+      <p>
         I am an Assistant Professor of Business Analytics at the
-        Jack Welch College of Business and Technology,
-        <a href="https://www.sacredheart.edu/" target="_blank" rel="noopener">Sacred Heart University</a>.
+        Jack Welch College of Business and Technology, <a href="https://www.sacredheart.edu/" target="_blank" rel="noopener">Sacred Heart University</a>.
       </p>
-      <p class="bio-text">
-        I received my Ph.D. in Economics from
-        <a href="https://newbrunswick.rutgers.edu/" target="_blank" rel="noopener">Rutgers University&ndash;New Brunswick</a>
-        in 2020 under the supervision of
+      <p>
+        I received my Ph.D. in Economics from <a href="https://newbrunswick.rutgers.edu/" target="_blank" rel="noopener">Rutgers University&ndash;New Brunswick</a> in 2020 under the supervision of
         <a href="https://economics.rutgers.edu/people/faculty/people/86-faculty/199-swanson-norman" target="_blank" rel="noopener">Professor Norman R. Swanson</a>.
         My dissertation focused on forecasting methods in high-frequency financial econometrics.
         Prior to that, I earned a B.A. in Economics and a B.Sc. in Mathematics from
@@ -46,8 +49,8 @@ title: Home
       </p>
     </section>
 
-    <section class="home-section">
-      <h2 class="home-section-title">Interests</h2>
+    <section class="interests-section">
+      <h2>Interests</h2>
       <ul class="interest-list">
         <li>Time Series &amp; Forecasting</li>
         <li>Machine Learning &amp; Big Data</li>
@@ -56,8 +59,8 @@ title: Home
       </ul>
     </section>
 
-    <section class="home-section">
-      <h2 class="home-section-title">Recent Work</h2>
+    <section class="news-section">
+      <h2>Recent Work</h2>
       <ul class="news-list">
         <li>
           <span class="news-year">2026</span>

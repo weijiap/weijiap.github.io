@@ -135,27 +135,20 @@ a:hover { text-decoration: underline; }
 .profile-email { margin-top: 2px; }
 .profile-email a { font-size: .85rem; color: var(--muted); word-break: break-all; }
 
-/* Main column sections */
-.home-section { margin-bottom: 36px; }
-
-.home-section-title {
-  font-family: 'Lato', sans-serif;
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border-bottom: 1px solid var(--border);
+/* Bio / main column */
+.profile-main h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  color: var(--navy);
+  border-bottom: 2px solid var(--border);
   padding-bottom: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  margin-top: 32px;
 }
 
-.bio-text {
-  font-size: .95rem;
-  color: var(--text);
-  line-height: 1.8;
-  margin-bottom: 12px;
-}
+.profile-main h2:first-child { margin-top: 0; }
+
+.bio-section p { margin-bottom: 12px; }
 
 /* Interests */
 .interest-list {

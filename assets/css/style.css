@@ -165,18 +165,16 @@ a:hover { text-decoration: underline; }
 .interest-list {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+  margin: 0;
 }
 
 .interest-list li {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+  position: relative;
+  padding-left: 14px;
   font-size: .93rem;
   color: var(--text);
-  line-height: 1.25;
+  line-height: 1.5;
+  margin-bottom: 4px;
 }
 
 .interest-list li::before {
@@ -185,7 +183,9 @@ a:hover { text-decoration: underline; }
   height: 6px;
   border-radius: 50%;
   background: var(--blue);
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0.42em;
 }
 
 @media (max-width: 680px) {

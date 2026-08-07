@@ -150,11 +150,9 @@ a:hover { text-decoration: underline; }
 
 .bio-section p { margin-bottom: 12px; }
 
-.edu-section,
-.interests-section,
-.news-section {
-  margin-top: 24px;
-}
+.edu-section { margin-top: 24px; }
+.interests-section { margin-top: 36px; }
+.news-section { margin-top: 36px; }
 
 /* Education + Interests side by side */
 .edu-interests-grid {

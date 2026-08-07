@@ -21,6 +21,9 @@ title: Home
       {% else %}
       <a href="#" class="btn-link disabled">LinkedIn</a>
       {% endif %}
+      {% if site.github_url and site.github_url != "" %}
+      <a href="{{ site.github_url }}" target="_blank" rel="noopener" class="btn-link">GitHub</a>
+      {% endif %}
       {% if site.cv_url and site.cv_url != "" %}
       <a href="{{ site.cv_url }}" target="_blank" rel="noopener" class="btn-link">CV</a>
       {% else %}

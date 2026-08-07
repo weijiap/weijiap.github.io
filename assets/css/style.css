@@ -188,6 +188,11 @@ a:hover { text-decoration: underline; }
   top: 0.42em;
 }
 
+.edu-meta {
+  font-size: .84rem;
+  color: var(--muted);
+}
+
 @media (max-width: 680px) {
   .page-home {
     grid-template-columns: 1fr;
